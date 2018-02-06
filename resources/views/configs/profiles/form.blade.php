@@ -1,7 +1,7 @@
 @extends('template.layout')
 
     @section('content')
-        <h2>Form Users</h2>
+        <h2>Form PERFILES</h2>
         @if(isset($model))
             {!! Form::model($model,['route'=>['configs.users.update',$model->id]]) !!}
         @else

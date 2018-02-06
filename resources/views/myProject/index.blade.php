@@ -1,7 +1,7 @@
 @extends('template.layout')
 
     @section('content')
-        <h2>Users</h2>
+        <h2>MyProject</h2>
         <table class="table">
             <thead>
                 <th>#</th>
@@ -25,5 +25,5 @@
             </tbody>
         </table>
 
-        <a href="{{route('configs.users.create')}}" class="btn btn-outline-primary">Agregar</a>
+        <a href="{{route(config($confFile.'.routeCreate'))}}" class="btn btn-outline-primary">Agregar</a>
     @endsection

@@ -4,7 +4,7 @@ namespace App\Http\Repositories;
 
 use App\Users;
 
-class UsersRepo extends BaseRepo
+class ProfilesRepo extends BaseRepo
 {
     public function getModel()
     {
