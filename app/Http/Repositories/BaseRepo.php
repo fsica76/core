@@ -14,6 +14,11 @@ abstract class BaseRepo
 
     public abstract function getModel();
 
+    public function getAllPaginated($paginate)
+    {
+        return $this->model->paginate($paginate);
+    }
+
     public function getAll()
     {
         return $this->model->all();

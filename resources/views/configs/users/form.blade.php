@@ -1,4 +1,4 @@
-@extends('template.layout')
+@extends('layouts.app')
 
     @section('content')
         <h2>Form Users</h2>
@@ -11,19 +11,21 @@
         <div class="form-group">
             {!! Form::label('User Name') !!}
             {!! Form::text('name',null,['class'=>'form-control']) !!}
+            <span class="text-danger">{{ $errors->has('name') ? $errors->first('name') : '' }}</span>
+
         </div>
         <div class="form-group">
             {!! Form::label('Password') !!}
             {!! Form::text('password',null,['class'=>'form-control']) !!}
+            <span class="text-danger">{{ $errors->has('password') ? $errors->first('password') : '' }}</span>
+
         </div>
         <div class="form-group">
             {!! Form::label('Email') !!}
             {!! Form::text('email',null,['class'=>'form-control']) !!}
-
-            {!! Form::hidden('area_id',3) !!}
-            {!! Form::hidden('area',3) !!}
+            <span class="text-danger">{{ $errors->has('email') ? $errors->first('email') : '' }}</span>
 
         </div>
-        <button type="submit" class="btn btn-outline-primary">Agregar</button>
+        <button type="submit" class="btn btn-default">Agregar</button>
         {!! Form::close() !!}
     @endsection

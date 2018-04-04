@@ -3,11 +3,11 @@
 namespace app\http\Controllers\Configs;
 
 
-use App\Http\Controllers\BaseController;
-use App\Http\Repositories\ProfilesRepo as Repo;
+use App\Http\Controllers\Controller;
+use App\Http\Repositories\Configs\PermissionsRepo as Repo;
 use Illuminate\Routing\Route;
 
-class ProfilesController extends BaseController
+class PermissionsController extends Controller
 {
     protected $repo;
     protected $module;
@@ -17,7 +17,7 @@ class ProfilesController extends BaseController
     {
         $this->repo = $repo;
         $this->route = $route;
-        $this->confFile = 'configs.profiles';
-        $this->data['confFile'] = 'configs.profiles';
+        $this->confFile = 'configs.permissions';
+        $this->data['confFile'] = 'configs.permissions';
     }
 }
