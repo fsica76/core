@@ -52,7 +52,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        //'auth.sso'=> \App\Http\Middleware\AuthenticateSso::class,
+        'auth.sso'=> \App\Http\Middleware\AuthenticateSso::class,
         'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,

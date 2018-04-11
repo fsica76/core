@@ -7,7 +7,7 @@
 
         <div class="form-group">
             {!! Form::label('Nombre Modulo') !!}
-            {!! Form::text('entity',null,['class'=>'form-control']) !!}
+            {!! Form::text('module',null,['class'=>'form-control']) !!}
             <span class="text-danger">{{ $errors->has('name') ? $errors->first('name') : '' }}</span>
         </div>
 

@@ -42,24 +42,9 @@ class AuthenticateSso
      */
     public function handle($request, Closure $next)
     {
-
         $currentUrl = URL::current();
         $urlCookie = (!is_null($currentUrl)) ? $currentUrl : route('home');
         $cookie = cookie('url_goto', $urlCookie, 10);
-
-
-        // Reviso si hay sesión abierta
-//        if ($this->auth->guest())
-//            if ($request->ajax())
-//                return response('Unauthorized.', 401);
-//    else
-//                return redirect()->guest('auth/login')->withCookie($cookie);
-
-//                //valida si el ENV si se loguea con no SSO
-//                if(env('SSO_AUTH'))
-//                    return redirect()->to(env('SSO_MDS_URL') . '/auth/check?redirect=' . route('auth.check'));
-//                else
-//                    return redirect()->guest('laogin')->withCookie($cookie);
 
         // Reviso si hay sesión abierta
         if ($this->auth->guest())

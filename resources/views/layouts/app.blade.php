@@ -38,7 +38,7 @@
                     <ul class="nav navbar-nav">
                         &nbsp;<li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                                Menu <span class="caret"></span>
+                                Config <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu">
@@ -53,6 +53,19 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                Menu <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a  href="{{route('core.index')}}">Core</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
