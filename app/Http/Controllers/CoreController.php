@@ -1,12 +1,12 @@
 <?php
 
-namespace app\http\Controllers\Configs;
+namespace app\http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Http\Repositories\Configs\UsersRepo as Repo;
+use App\Http\Repositories\CoreRepo as Repo;
 use Illuminate\Routing\Route;
 
-class UsersController extends Controller
+class CoreController extends Controller
 {
     protected $repo;
     protected $module;
@@ -16,11 +16,11 @@ class UsersController extends Controller
     {
         $this->repo = $repo;
         $this->route = $route;
-        $confFile = 'configs.users';
+        $confFile = 'core';
+
         // nombre de archivo de configuracion
 
         $this->confFile = $confFile;
         $this->data['confFile'] = $confFile;
-
     }
 }

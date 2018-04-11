@@ -1,6 +1,8 @@
 <?php
 
-$module = 'users';
+
+
+$module = 'roles';
 
 return [
 
@@ -26,24 +28,22 @@ return [
     'validationsStore' =>
         [
             'name' => 'required',
-//            'slug' =>'required',
-//            'level'=>'required',
+            'slug' =>'required',
+            'level'=>'required',
 //            'tiny' =>  'required|boolean',
 //            'date'=> 'required|date',
-            'email'=> 'required|email',
-            'password'=> 'required'
-
+//            'email'=> 'required|email'
         ],
 
     //validaciones de edición
 
     'validationsUpdate' => [
         'name' => 'required',
-//        'slug' =>'required',
-//        'level'=>'required',
+        'slug' =>'required',
+           'level'=>'required',
 //        'tiny' =>  'required|boolean',
 //        'date'=> 'required|date',
-        'email'=> 'required|email'
+//        'email'=> 'required|email'
     ],
 
 ];

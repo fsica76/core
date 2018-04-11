@@ -11,90 +11,70 @@
 |
 */
 
-    Route::view('index','template.layout');
+Auth::routes();
 
-    Route::group(['prefix'=>'configs'],function()
-    {
-        Route::group(['prefix'=> 'users'], function(){
+Route::get('/', function () {
+    return view('welcome');
+});
 
-            Route::get('index', [
-                'as' => 'configs.users.index',
-                'uses' => 'Configs\UsersController@index'
-            ]);
+Route::get('/home', 'HomeController@index')->name('home');
 
-            Route::get('create', [
-                'as' => 'configs.users.create',
-                'uses' => 'Configs\UsersController@create'
-            ]);
 
-            Route::post('store', [
-                'as' => 'configs.users.store',
-                'uses' => 'Configs\UsersController@store'
-            ]);
+// (env('SSO_AUTH')? 'auth_sso':'auth' ) valida si usa sso o validacion local
+Route::group(['middleware'=> (env('SSO_AUTH')? 'auth.sso':'auth' )],function(){
 
-                Route::group(['prefix' => '{id?}'], function() {
-
-                    Route::get('edit', [
-                        'as' => 'configs.users.edit',
-                        'uses' => 'Configs\UsersController@edit'
-                    ]);
-
-                    Route::post('udpate', [
-                        'as' => 'configs.users.update',
-                        'uses' => 'Configs\UsersController@update'
-                    ]);
-
-                    Route::get('destroy', [
-                        'as' => 'configs.users.destroy',
-                        'uses' => 'Configs\UsersController@destroy'
-                    ]);
-
-                });
-
-            });
-    });
-
-Route::group(['prefix'=>'configs'],function()
-{
-    Route::group(['prefix'=> 'profiles'], function(){
-
-        $module = 'profiles';
+    // Core
+    Route::group(['prefix'=> 'core'], function(){
 
         Route::get('index', [
-            'as' => 'configs.'.$module.'.index',
-            'uses' => 'Configs\ProfilesController@index'
+            'as' => 'core.index',
+            'uses' => 'CoreController@index'
         ]);
 
         Route::get('create', [
-            'as' => 'configs.profiles.create',
-            'uses' => 'Configs\ProfilesController@create'
+            'as' => 'core.create',
+            'uses' => 'CoreController@create'
         ]);
 
         Route::post('store', [
-            'as' => 'configs.profiles.store',
-            'uses' => 'Configs\ProfilesController@store'
+            'as' => 'core.store',
+            'uses' => 'CoreController@store'
         ]);
 
         Route::group(['prefix' => '{id?}'], function() {
 
             Route::get('edit', [
-                'as' => 'configs.profiles.edit',
-                'uses' => 'Configs\ProfilesController@edit'
+                'as' => 'core.edit',
+                'uses' => 'CoreController@edit'
             ]);
 
             Route::post('udpate', [
-                'as' => 'configs.profiles.update',
-                'uses' => 'Configs\ProfilesController@update'
+                'as' => 'core.update',
+                'uses' => 'CoreController@update'
             ]);
 
             Route::get('destroy', [
-                'as' => 'configs.profiles.destroy',
-                'uses' => 'Configs\ProfilesController@destroy'
+                'as' => 'core.destroy',
+                'uses' => 'UsersController@destroy'
             ]);
-
         });
-
     });
 });
 
+Route::view('setup','configs.setup.form');
 
+Route::post('setup',function(\Illuminate\Http\Request $request) {
+
+   $module = $request->module;
+
+   try{
+
+       \Illuminate\Support\Facades\Artisan::call('make:model',['name'=> $module]);
+
+   }catch (Exception $e)
+   {
+       dd($e->getMessage());
+   }
+
+
+})->name('setup.post');

@@ -1,4 +1,4 @@
-@extends('template.layout')
+@extends('layouts.app')
 
     @section('content')
         <h2>Users</h2>
@@ -15,15 +15,14 @@
                     <td>{{$user->id}}</td>
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
-
                     <td>
-                        <a href="{{route('configs.users.edit',$user->id)}}" class="btn"><span class="far fa-edit"></span></a>
-                        <a href="{{route('configs.users.destroy',$user->id)}}" class="btn"><span class="fas fa-trash-alt"></span></a>
+                        <a href="{{route('configs.users.edit',$user->id)}}" class="btn btn-default">Edit</a>
+                        <a href="{{route('configs.users.destroy',$user->id)}}" class="btn btn-default">Del</a>
                     </td>
                 </tr>
                @endforeach
             </tbody>
         </table>
 
-        <a href="{{route('configs.users.create')}}" class="btn btn-outline-primary">Agregar</a>
+        <a href="{{route('configs.users.create')}}" class="btn btn-default">Agregar</a>
     @endsection

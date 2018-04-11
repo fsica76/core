@@ -2,11 +2,12 @@
 
 namespace app\http\Controllers\Configs;
 
+
 use App\Http\Controllers\Controller;
-use App\Http\Repositories\Configs\UsersRepo as Repo;
+use App\Http\Repositories\Configs\PermissionsRepo as Repo;
 use Illuminate\Routing\Route;
 
-class UsersController extends Controller
+class PermissionsController extends Controller
 {
     protected $repo;
     protected $module;
@@ -16,11 +17,7 @@ class UsersController extends Controller
     {
         $this->repo = $repo;
         $this->route = $route;
-        $confFile = 'configs.users';
-        // nombre de archivo de configuracion
-
-        $this->confFile = $confFile;
-        $this->data['confFile'] = $confFile;
-
+        $this->confFile = 'configs.permissions';
+        $this->data['confFile'] = 'configs.permissions';
     }
 }
