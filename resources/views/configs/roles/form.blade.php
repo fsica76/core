@@ -32,6 +32,6 @@
             <span class="text-danger">{{ $errors->has('level') ? $errors->first('level') : '' }}</span>
 
         </div>
-        <button type="submit" class="btn btn-default">Agregar</button>
+        <button type="submit" class="btn btn-secondary">Agregar</button>
         {!! Form::close() !!}
     @endsection

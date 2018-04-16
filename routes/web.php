@@ -21,7 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 // (env('SSO_AUTH')? 'auth_sso':'auth' ) valida si usa sso o validacion local
-Route::group(['middleware'=> (env('SSO_AUTH')? 'auth.sso':'auth' )],function(){
+Route::group(['middleware'=> 'auth'],function(){
 
     // Core
     Route::group(['prefix'=> 'core'], function(){

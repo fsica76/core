@@ -28,49 +28,34 @@
         </div>
 
         <ul class="list-unstyled components">
+
+
             <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
-                    <i class="fa fa-home"></i>
+                <a href="#">
+                    <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li><a href="#">Home 1</a></li>
-                    <li><a href="#">Home 2</a></li>
-                    <li><a href="#">Home 3</a></li>
-                </ul>
             </li>
+
             <li>
-                <a href="#">
-                    <i class="fas fa-briefcase"></i>
-                    <span>About</span>
+                <a href="{{route('core.index')}}">
+                    <i class="fa fa-link"></i>
+                    <span>Core</span>
                 </a>
+            </li>
+
+            <li>
+
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
-                    <i class="far fa-copy"></i>
-                    <span>Pages</span>
+                    <i class="fas fa-cogs"></i>
+                    <span>Config</span>
                 </a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
+
+                    <li><a href="{{route('configs.users.index')}}">Users</a></li>
+                    <li><a href="{{route('configs.roles.index')}}">Roles</a></li>
+                    <li><a href="{{route('configs.permissions.index')}}">Permissions</a></li>
                 </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-link"></i>
-                    <span>Portfolio</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fas fa-paperclip"></i>
-                    <span>FAQ</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fab fa-telegram-plane"></i>
-                    <span>Contact</span>
-                </a>
             </li>
         </ul>
 
@@ -83,31 +68,6 @@
 
 
             <div class="collapse navbar-collapse d-flex justify-content-end mr-5" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarconfig" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">
-                            Config
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarconfig">
-                            <a class="dropdown-item" href="{{route('configs.users.index')}}">Users</a>
-                            <a class="dropdown-item" href="{{route('configs.roles.index')}}">Roles</a>
-                            <a class="dropdown-item" href="{{route('configs.permissions.index')}}">Permissions</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbar-menu" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">
-                            Menu
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbar-menu">
-                            <a class="dropdown-item" href="{{route('core.index')}}">Core</a>
-                        </div>
-                    </li>
-
-                </ul>
-
 
                 <ul class="navbar-nav d-flex justify-content-end">
 
@@ -144,8 +104,11 @@
 
         <div class="row m-3">
             <div class="col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque praesentium, suscipit. Assumenda beatae consequatur cupiditate deserunt dicta dignissimos, eaque iusto laudantium modi natus necessitatibus nesciunt numquam odio quasi qui sunt!</p>
-                @yield('content')
+                <div class="card">
+                    <div class="card-body">
+                         @yield('content')
+                    </div>
+                </div>
             </div>
         </div>
     </div>

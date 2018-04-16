@@ -16,13 +16,13 @@
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
                     <td>
-                        <a href="{{route('configs.users.edit',$user->id)}}" class="btn btn-default">Edit</a>
-                        <a href="{{route('configs.users.destroy',$user->id)}}" class="btn btn-default">Del</a>
+                        <a href="{{route('configs.users.edit',$user->id)}}" class="btn btn-secondary">Edit</a>
+                        <a href="{{route('configs.users.destroy',$user->id)}}" class="btn btn-secondary">Del</a>
                     </td>
                 </tr>
                @endforeach
             </tbody>
         </table>
 
-        <a href="{{route('configs.users.create')}}" class="btn btn-default">Agregar</a>
+        <a href="{{route('configs.users.create')}}" class="btn btn-secondary">Agregar</a>
     @endsection

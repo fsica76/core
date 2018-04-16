@@ -35,6 +35,6 @@
             {!! Form::text('date',null,['class'=>'form-control']) !!}
             <span class="text-danger">{{ $errors->has('date') ? $errors->first('date') : '' }}</span>
         </div>
-        <button type="submit" class="btn btn-default">Agregar</button>
+        <button type="submit" class="btn btn-secondary">Agregar</button>
         {!! Form::close() !!}
     @endsection

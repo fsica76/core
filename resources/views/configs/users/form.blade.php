@@ -26,6 +26,6 @@
             <span class="text-danger">{{ $errors->has('email') ? $errors->first('email') : '' }}</span>
 
         </div>
-        <button type="submit" class="btn btn-default">Agregar</button>
+        <button type="submit" class="btn btn-secondary">Agregar</button>
         {!! Form::close() !!}
     @endsection

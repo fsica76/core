@@ -2,12 +2,14 @@
 
     @section('content')
         <h2>Core</h2>
-        <table class="table">
+        <table class="table table-hover">
             <thead>
-                <th>#</th>
-                <th>Date</th>
-                <th>Text</th>
-                <th></th>
+                <tr>
+                    <th>#</th>
+                    <th>Date</th>
+                    <th>Text</th>
+                    <th></th>
+                </tr>
             </thead>
             <tbody>
                @foreach($datas as $user)
@@ -16,8 +18,8 @@
                     <td>{{$user->date}}</td>
                     <td>{{$user->text}}</td>
                     <td>
-                        <a href="{{route(config($confFile.'.routeEdit'),$user->id)}}" class="btn btn-default">Edit</a>
-                        <a href="{{route(config($confFile.'.routeDestroy'),$user->id)}}" class="btn btn-default">Del</a>
+                        <a href="{{route(config($confFile.'.routeEdit'),$user->id)}}" class="btn btn-secondary">Edit</a>
+                        <a href="{{route(config($confFile.'.routeDestroy'),$user->id)}}" class="btn btn-secondary">Del</a>
                     </td>
                 </tr>
                @endforeach
@@ -25,5 +27,5 @@
         </table>
 
 
-        <a href="{{ route(config($confFile.'.routeCreate')) }}" class="btn btn-default">Crear</a>
+        <a href="{{ route(config($confFile.'.routeCreate')) }}" class="btn btn-secondary">Crear</a>
     @endsection
