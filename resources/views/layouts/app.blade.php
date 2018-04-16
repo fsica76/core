@@ -141,11 +141,39 @@
 
         </nav>
 
+        <div class="m-3">
 
-        <div class="row m-3">
-            <div class="col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque praesentium, suscipit. Assumenda beatae consequatur cupiditate deserunt dicta dignissimos, eaque iusto laudantium modi natus necessitatibus nesciunt numquam odio quasi qui sunt!</p>
-                @yield('content')
+            <div class="row">
+
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Ey!!</strong> Error.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque praesentium, suscipit. Assumenda beatae consequatur cupiditate deserunt dicta dignissimos, eaque iusto laudantium modi natus necessitatibus nesciunt numquam odio quasi qui sunt!</p>
+                    @yield('content')
+                </div>
             </div>
         </div>
     </div>
