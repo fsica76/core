@@ -158,6 +158,11 @@ ul ul a {
   background: #222d32;
 }
 
+#sidebar ul ul li.active a:hover,#sidebar ul ul li.active a:active,#sidebar ul ul li.active a[aria-expanded="true"],#sidebar ul ul li a:hover,#sidebar ul ul li a:active,#sidebar ul ul li a[aria-expanded="true"],#sidebar ul li a:active,#sidebar ul li a:hover{
+  background: #415f6a;
+
+}
+
 ul.CTAs {
   padding: 20px;
 }
