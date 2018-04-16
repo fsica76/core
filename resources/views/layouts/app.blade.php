@@ -101,6 +101,41 @@
 
         </nav>
 
+        <div class="m-3">
+
+            <div class="row">
+
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+
+            {{$errors? $errors :'2'}}
+            @if(isset($errors))
+                @foreach($errors as $e)
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Ey!!</strong>. {{$errors}}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @endif
+
+
+
+
 
         <div class="row m-3">
             <div class="col">

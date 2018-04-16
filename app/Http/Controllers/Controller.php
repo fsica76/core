@@ -15,7 +15,7 @@ class Controller extends BaseController
     public function index()
     {
         $this->data['datas'] = $this->repo->getAllPaginated(config($this->confFile.".paginate"));
-        return view(config($this->confFile.".viewIndex"))->with($this->data);
+        return view(config($this->confFile.".viewIndex"))->with($this->data)->withErrors(['dasdsa','eqwewq']);
     }
 
 

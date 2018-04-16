@@ -13,11 +13,9 @@
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', 'HomeController@index')->name('home');
 
 
 // (env('SSO_AUTH')? 'auth_sso':'auth' ) valida si usa sso o validacion local
