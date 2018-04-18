@@ -30,10 +30,10 @@ class AuthController extends Controller
     public function login(SsoFunction $ssoFunction)
     {
         if (!$this->auth->check())
-            //return redirect()->to(env('SSO_MDS_URL', '') . '/auth/check?redirect=' . route('auth.check'));
-            return redirect()->route('login');
+            return redirect()->to(env('SSO_MDS_URL', '') . '/auth/check?redirect=' . route('auth.validate'));
+            //return redirect()->route('login');
         else
-            return redirect()->intended('configs.users');
+            return redirect()->intended('home');
 
     }
 

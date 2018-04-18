@@ -13,13 +13,22 @@
 
 Auth::routes();
 
+Route::get('auth/login', [
+    'as' => 'auth.login',
+    'uses' => 'Auth\AuthController@login'
+]);
 
-
-Route::get('/', 'HomeController@index')->name('home');
-
+Route::get('auth', [
+    'as' => 'auth.validate',
+    'uses' => 'Auth\AuthController@validateLogin'
+]);
 
 // (env('SSO_AUTH')? 'auth_sso':'auth' ) valida si usa sso o validacion local
-Route::group(['middleware'=> 'auth'],function(){
+Route::group(['middleware'=> (env('SSO_AUTH')? 'auth.sso':'auth' )],function(){
+
+
+    Route::get('/', 'HomeController@index')->name('home');
+
 
     // Core
     Route::group(['prefix'=> 'core'], function(){

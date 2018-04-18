@@ -28,10 +28,8 @@
         </div>
 
         <ul class="list-unstyled components">
-
-
             <li class="active">
-                <a href="#">
+                <a href="{{route('home')}}">
                     <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a>
@@ -82,16 +80,23 @@
                             </a>
 
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    Logout
-                                </a>
+                               @if(!env('SSO_AUTH'))
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                        Cerrar sesión
+                                    </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                      style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                          style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                @else
+                                    <a class="dropdown-item" href="{{env('SSO_MDS_URL')}}/auth/logout?redirect={{route('home')}}">
+                                        <em class="icon-logout"></em>
+                                        <span>Cerrar sesión</span>
+                                    </a>
+                                @endif
 
                             </div>
                         </li>
@@ -108,7 +113,7 @@
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#"><span class="fas fa-home"></span> </a></li>
                             <li class="breadcrumb-item"><a href="#">Library</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Data</li>
                         </ol>
@@ -116,14 +121,12 @@
                 </div>
             </div>
 
-
-            {{$errors? $errors :'2'}}
             @if(isset($errors))
                 @foreach($errors as $e)
                     <div class="row">
                         <div class="col-12">
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                <strong>Ey!!</strong>. {{$errors}}
+                                <strong>Ey!!</strong>. {{$e}}
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>

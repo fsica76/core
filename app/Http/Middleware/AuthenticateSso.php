@@ -52,9 +52,9 @@ class AuthenticateSso
                 return response('Unauthorized.', 401);
             else
                // if(env('SSO_AUTH'))
-               //     return redirect()->to(env('SSO_MDS_URL') . '/auth/check?redirect=' . route('auth.check'));
+                   return redirect()->to(env('SSO_MDS_URL') . '/auth/check?redirect=' . route('auth.login'));
                // else
-                    return redirect()->guest('config/auth/login')->withCookie($cookie);
+                    //return redirect()->guest('login')->withCookie($cookie);
 
         // Reviso que la sesión en sso esté abierta/**/
         $sessionId = session('sso_session_id', '');
@@ -70,7 +70,7 @@ class AuthenticateSso
                 return response('Unauthorized.', 401);
             else {
                 if ($codeSso == 200)
-                    abort(403);
+                    abort(404);
                 else
                     return redirect()->guest('login')->withCookie($cookie);
             }
@@ -82,13 +82,12 @@ class AuthenticateSso
         // Guardo datos del usuario
             $datosUser = $datosSSo->result->user;
 
-       // dd($datosUser);
              $this->_saveUserDate(Auth::user(), $datosUser);
 
         return $next($request);
     }
 
-    protected function _saveUserDate(User $user, $datos)
+    protected function _saveUserDate( $user, $datos)
     {
         $fecha = Carbon::createFromFormat(\DateTime::ISO8601, $datos->dateUpdated);
 
