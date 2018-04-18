@@ -76,6 +76,13 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarconfig" data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
+                                @if(Auth::user()->imagen_thumb)
+                                <img src="{{ Auth::user()->imagen_thumb }}" class="img-user img-responsive rounded-circle" alt="">
+                                @else
+                                {{--<img src="img/perfil-azul.png" class="img-user img-responsive rounded-circle" alt="">--}}
+                                    <i class="icon-user fas fa-user rounded-circle"></i>
+                                @endif
+
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
