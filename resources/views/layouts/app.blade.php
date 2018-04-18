@@ -113,7 +113,7 @@
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#"><span class="fas fa-home"></span> </a></li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="fas fa-home"></i> </a></li>
                             <li class="breadcrumb-item"><a href="#">Library</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Data</li>
                         </ol>
@@ -121,24 +121,21 @@
                 </div>
             </div>
 
-            @if(isset($errors))
-                @foreach($errors as $e)
-                    <div class="row">
-                        <div class="col-12">
+            @if (count($errors) > 0)
+                <div class="row">
+                    <div class="col-12">
+                        @foreach ($errors->all() as $error)
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                <strong>Ey!!</strong>. {{$e}}
+                                <strong>{{$error}}</strong>.
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
-                @endforeach
+                </div>
             @endif
-
-
-
-
+            
 
         <div class="row m-3">
             <div class="col">

@@ -15,9 +15,8 @@ class Controller extends BaseController
     public function index()
     {
         $this->data['datas'] = $this->repo->getAllPaginated(config($this->confFile.".paginate"));
-        return view(config($this->confFile.".viewIndex"))->with($this->data)->withErrors(['dasd']);
+        return view(config($this->confFile.".viewIndex"))->with($this->data);
     }
-
 
     public function create()
     {
@@ -31,7 +30,7 @@ class Controller extends BaseController
 
         $this->repo->create($request->all());
 
-        return redirect()->route(config($this->confFile.".viewIndex"));
+        return redirect()->route(config($this->confFile.".viewIndex"))->withErrors('Registro Creado.');
     }
 
     public function edit()
@@ -50,7 +49,7 @@ class Controller extends BaseController
         $model->fill($request->all());
         $model->save();
 
-        return redirect()->route(config($this->confFile.".viewIndex"));
+        return redirect()->route(config($this->confFile.".viewIndex"))->withErrors('Registro Editado.');
     }
 
     public function destroy()
@@ -59,6 +58,6 @@ class Controller extends BaseController
 
         $model->delete();
 
-        return redirect()->route(config($this->confFile.".viewIndex"));
+        return redirect()->route(config($this->confFile.".viewIndex"))->withErrors('Registro Editado.');
     }
 }
