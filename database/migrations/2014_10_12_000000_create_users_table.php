@@ -16,14 +16,18 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('username');
+            $table->string('fullname');
+
                 //el unique tiene que tener lenght 191
                 $table->string('email',191)->unique();
+
             $table->string('password');
             $table->integer('sedes_id');
-            $table->string('images');
-            $table->string('images_thumb');
-            $table->string('fullname');
+            $table->string('imagen')->nullable();
+            $table->string('imagen_thumb')->nullable();
             $table->integer('is_active');
+
             $table->rememberToken();
             $table->timestamps();
         });
