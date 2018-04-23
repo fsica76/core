@@ -14,7 +14,7 @@
             <span class="text-danger">{{ $errors->has('name') ? $errors->first('name') : '' }}</span>
 
         </div>
-        <div class="form-group">
+       {{-- <div class="form-group">
             {!! Form::label('Slug') !!}
             {!! Form::text('slug',null,['class'=>'form-control']) !!}
             <span class="text-danger">{{ $errors->has('slug') ? $errors->first('slug') : '' }}</span>
@@ -31,7 +31,7 @@
             {!! Form::text('level',null,['class'=>'form-control']) !!}
             <span class="text-danger">{{ $errors->has('level') ? $errors->first('level') : '' }}</span>
 
-        </div>
+        </div>--}}
         <button type="submit" class="btn btn-secondary">Agregar</button>
         {!! Form::close() !!}
     @endsection

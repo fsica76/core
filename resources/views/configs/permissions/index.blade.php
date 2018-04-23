@@ -5,8 +5,7 @@
         <table class="table">
             <thead>
                 <th>#</th>
-                <th>UserName</th>
-                <th>Email</th>
+                <th>Permiso</th>
                 <th></th>
             </thead>
             <tbody>
@@ -14,8 +13,6 @@
                 <tr>
                     <td>{{$data->id}}</td>
                     <td>{{$data->name}}</td>
-                    <td>{{$data->email}}</td>
-
                     <td>
                         <a href="{{route(config($confFile.('.routeEdit')),$data->id)}}" class="btn btn-secondary">Edit</a>
                         <a href="{{route(config($confFile.('.routeDestroy')),$data->id)}}" class="btn btn-secondary">Del</a>

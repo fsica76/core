@@ -15,7 +15,7 @@ class UsersRepo extends BaseRepo
     public function searchByUsername($username)
     {
         return $this->model
-            ->where('name', $username)
+            ->where('username', $username)
             ->first();
     }
 }

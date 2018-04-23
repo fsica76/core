@@ -48,6 +48,11 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if ($exception instanceof \Spatie\Permission\Exceptions\UnauthorizedException)
+        {
+                return redirect()->back()->withErrors('Usted no posee permiso para acceder al a función requerida.');
+        }
+
         return parent::render($request, $exception);
     }
 }

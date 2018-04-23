@@ -28,8 +28,8 @@ return [
     'validationsStore' =>
         [
             'name' => 'required',
-            'slug' =>'required',
-            'level'=>'required',
+  //          'slug' =>'required',
+ //           'level'=>'required',
 //            'tiny' =>  'required|boolean',
 //            'date'=> 'required|date',
 //            'email'=> 'required|email'
@@ -39,8 +39,8 @@ return [
 
     'validationsUpdate' => [
         'name' => 'required',
-        'slug' =>'required',
-           'level'=>'required',
+ //       'slug' =>'required',
+ //          'level'=>'required',
 //        'tiny' =>  'required|boolean',
 //        'date'=> 'required|date',
 //        'email'=> 'required|email'

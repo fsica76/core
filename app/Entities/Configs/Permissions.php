@@ -2,9 +2,7 @@
 
 namespace App\Entities\Configs;
 
-use Bican\Roles\Models\Permission;
-
-class Permissions extends Permission
+class Permissions extends \Spatie\Permission\Models\Permission
 {
 
 }

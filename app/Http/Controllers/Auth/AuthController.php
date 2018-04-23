@@ -53,7 +53,6 @@ class AuthController extends Controller
         // Reviso que el usuario exista y tenga acceso
         $user = $this->userRepo->searchByUsername($request->get('user'));
 
-
         //if (empty($user) || is_null($user)) abort(403);
         if (empty($user) || is_null($user)) abort(403);
 

@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('APP_NAME', 'Laravel') }}</title>
+    <title>{{ env('APP_NAME', 'MDS') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -23,8 +23,8 @@
     <!-- Sidebar -->
     <aside id="sidebar">
         <div class="sidebar-header">
-            <h3>{{ config('APP_NAME', 'Laravel') }}</h3>
-            <strong>{{ config('APP_NAME', 'Laravel') }}</strong>
+            <h3>{{ env('APP_NAME', 'MDS1') }}</h3>
+            <strong>{{ env('APP_NAME', 'MDS2') }}</strong>
         </div>
 
         <ul class="list-unstyled components">
@@ -43,18 +43,17 @@
             </li>
 
             <li>
-
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
                     <i class="fas fa-cogs"></i>
                     <span>Config</span>
                 </a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
-
                     <li><a href="{{route('configs.users.index')}}">Users</a></li>
                     <li><a href="{{route('configs.roles.index')}}">Roles</a></li>
                     <li><a href="{{route('configs.permissions.index')}}">Permissions</a></li>
                 </ul>
             </li>
+
         </ul>
 
     </aside>

