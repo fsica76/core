@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('APP_NAME', 'Laravel') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -23,8 +23,8 @@
     <!-- Sidebar -->
     <aside id="sidebar">
         <div class="sidebar-header">
-            <h3>{{ config('app.name', 'Laravel') }}</h3>
-            <strong>{{ config('app.name', 'Laravel') }}</strong>
+            <h3>{{ config('APP_NAME', 'Laravel') }}</h3>
+            <strong>{{ config('APP_NAME', 'Laravel') }}</strong>
         </div>
 
         <ul class="list-unstyled components">
