@@ -7,7 +7,7 @@ Route::group(['middleware'=> 'auth'], function(){
 
     // PROFILES Users
 
-    Route::group(['prefix'=> 'users','middleware'=>['role:Administrador']], function(){
+    Route::group(['prefix'=> 'users'], function(){
 
         Route::get('index', [
             'as' => 'configs.users.index',

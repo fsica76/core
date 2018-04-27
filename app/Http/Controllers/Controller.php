@@ -60,4 +60,11 @@ class Controller extends BaseController
 
         return redirect()->route(config($this->confFile.".viewIndex"))->withErrors('Registro Editado.');
     }
+
+    public function  show()
+    {
+        $this->data['model']= $this->repo->find($this->route->id);
+
+        return view(config($this->confFile.".viewShow"))->with($this->data);
+    }
 }

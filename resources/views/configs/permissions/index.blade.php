@@ -2,7 +2,7 @@
 
     @section('content')
         <h2>Permissions</h2>
-        <table class="table">
+        <table id="table" class="table">
             <thead>
                 <th>#</th>
                 <th>Permiso</th>

@@ -10,6 +10,7 @@ return [
 
     'viewIndex' => $module.'.index',
     'viewForm' => $module.'.form',
+    'viewShow' => $module.'.show',
 
     //rutas del modulo
 
@@ -18,6 +19,7 @@ return [
     'routeUpdate' => $module.'.update',
     'routeStore' => $module.'.store',
     'routeDestroy' => $module.'.destroy',
+    'routeShow' => $module.'.show',
 
 
     //validaciones de creación

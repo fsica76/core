@@ -60,6 +60,11 @@ Route::group(['middleware'=> (env('SSO_AUTH')? 'auth.sso':'auth' )],function(){
                 'uses' => 'CoreController@edit'
             ]);
 
+            Route::get('show', [
+                'as' => 'core.show',
+                'uses' => 'CoreController@show'
+            ]);
+
             Route::post('udpate', [
                 'as' => 'core.update',
                 'uses' => 'CoreController@update'

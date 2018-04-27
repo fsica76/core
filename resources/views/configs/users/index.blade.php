@@ -2,7 +2,7 @@
 
     @section('content')
         <h2>Users</h2>
-        <table class="table">
+        <table id="table" class="table">
             <thead>
                 <th>#</th>
                 <th>UserName</th>

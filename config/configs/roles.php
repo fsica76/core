@@ -13,6 +13,7 @@ return [
 
     'viewIndex' => 'configs.'.$module . '.index',
     'viewForm' => 'configs.'.$module . '.form',
+    'viewShow' => $module.'.show',
 
     //rutas del modulo
 
@@ -21,6 +22,7 @@ return [
     'routeUpdate' => 'configs.'.$module . '.update',
     'routeStore' => 'configs.'.$module . '.store',
     'routeDestroy' => 'configs.'.$module . '.destroy',
+    'routeShow' => $module.'.show',
 
 
     //validaciones de creación

@@ -2,7 +2,7 @@
 
     @section('content')
         <h2>Core</h2>
-        <table class="table table-hover">
+        <table id="table" class="table table-hover">
             <thead>
                 <tr>
                     <th>#</th>
@@ -14,7 +14,7 @@
             <tbody>
                @foreach($datas as $user)
                 <tr>
-                    <td>{{$user->id}}</td>
+                    <td><a href="{{route(config($confFile.'.routeShow'),$user->id)}}" >{{$user->id}}</a></td>
                     <td>{{$user->date}}</td>
                     <td>{{$user->text}}</td>
                     <td>
