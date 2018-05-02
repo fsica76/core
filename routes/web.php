@@ -95,3 +95,13 @@ Route::post('setup',function(\Illuminate\Http\Request $request) {
 
 
 })->name('setup.post');
+
+// ejemplo unidb
+
+Route::get('unidb',function(\App\Http\Functions\ApimdsFunction $api){
+
+    $api->call(env('API_MDS_URL').'/unidb/areas?limit=500');
+    $res = $api->getResultado()->results;
+
+   dd($res);
+});
