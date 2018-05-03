@@ -78,4 +78,10 @@ abstract class BaseRepo
 
         return true;
     }
+
+    public function select()
+    {
+        return $this->model->all()->pluck('name','id');
+
+    }
 }

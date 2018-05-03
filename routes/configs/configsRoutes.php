@@ -83,7 +83,20 @@ Route::group(['middleware'=> 'auth'], function(){
                 'uses' => 'Configs\RolesController@destroy'
             ]);
 
+            Route::get('permisos', [
+                'as' => 'configs.'.$module.'.permissions',
+                'uses' => 'Configs\RolesController@permissions'
+            ]);
+
+            Route::post('permisos', [
+                'as' => 'configs.'.$module.'.permissions',
+                'uses' => 'Configs\RolesController@postPermissions'
+            ]);
+
         });
+
+
+
 
     });
 

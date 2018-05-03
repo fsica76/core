@@ -7,6 +7,8 @@
                 <th>#</th>
                 <th>UserName</th>
                 <th>Email</th>
+                <th>Rol</th>
+
                 <th></th>
             </thead>
             <tbody>
@@ -15,6 +17,8 @@
                     <td>{{$user->id}}</td>
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
+                    <td>{{$user->getRoleNames()}}</td>
+
                     <td>
                         <a href="{{route('configs.users.edit',$user->id)}}" class="btn btn-secondary">Edit</a>
                         <a href="{{route('configs.users.destroy',$user->id)}}" class="btn btn-secondary">Del</a>

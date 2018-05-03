@@ -6,6 +6,7 @@
             <thead>
                 <th>#</th>
                 <th>Roles</th>
+                <th>Permisos</th>
                 <th></th>
             </thead>
             <tbody>
@@ -13,6 +14,7 @@
                 <tr>
                     <td>{{$data->id}}</td>
                     <td>{{$data->name}}</td>
+                    <td><a href="{{route('configs.roles.permissions',$data->id)}}" class="btn btn-secondary">Permisos</a></td>
 
                     <td>
                         <a href="{{route(config($confFile.('.routeEdit')),$data->id)}}" class="btn btn-secondary">Edit</a>
