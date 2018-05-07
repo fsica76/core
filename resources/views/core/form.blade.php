@@ -32,7 +32,7 @@
         </div>
         <div class="form-group">
             {!! Form::label('Date') !!}
-            {!! Form::text('date',null,['class'=>'form-control']) !!}
+            {!! Form::text('date',null,['class'=>'datepicker form-control']) !!}
             <span class="text-danger">{{ $errors->has('date') ? $errors->first('date') : '' }}</span>
         </div>
         <button type="submit" class="btn btn-secondary">Agregar</button>
