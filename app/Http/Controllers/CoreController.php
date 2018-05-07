@@ -23,4 +23,5 @@ class CoreController extends Controller
         $this->confFile = $confFile;
         $this->data['confFile'] = $confFile;
     }
+
 }
