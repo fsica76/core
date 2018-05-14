@@ -12,10 +12,5 @@ class CoreRepo extends BaseRepo
         return new Core();
     }
 
-    public function searchByUsername($username)
-    {
-        return $this->model
-            ->where('name', $username)
-            ->first();
-    }
+
 }

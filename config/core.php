@@ -27,7 +27,7 @@ return [
     'validationsStore' =>
         [
             'text' =>  'required',
-             'string' =>  'required',
+             //'string' =>  'required',
              'tiny' =>  'required|boolean',
              'double' =>  'required',
 
