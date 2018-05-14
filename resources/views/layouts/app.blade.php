@@ -15,71 +15,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<<<<<<< HEAD
-<<<<<<< HEAD
-    {{--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">--}}
-
-
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet">
-
-
-</head>
-<body>
-
-<div class="wrapper">
-    <!-- Sidebar -->
-    <aside id="sidebar">
-        <div class="sidebar-header">
-            <h3>{{ env('APP_NAME', 'MDS1') }}</h3>
-            <strong>{{ env('APP_NAME', 'MDS2') }}</strong>
-        </div>
-=======
-=======
->>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
 
     <!-- Font Awesome Icons -->
     {{--    <link rel="stylesheet" href="{{ asset('js/plugins/font-awesome/css/font-awesome.min.css') }}">--}}
     <link rel="stylesheet" href="{{ asset('plugins/font-awesome/css/font-awesome.css') }}">
-<<<<<<< HEAD
->>>>>>> c5ee8d205e53eaae83e04d3f3a1ddfe26d99abfc
-=======
->>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
-
     <!-- IonIcons -->
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <li>
-                <a href="{{route('core.index')}}">
-                    <i class="fa fa-link"></i>
-                    <span>Core</span>
-                </a>
-            </li>
-=======
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
->>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
-
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-
-<<<<<<< HEAD
-=======
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-=======
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet">
->>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
 
 </head>
 
@@ -92,30 +41,10 @@
             <li class="nav-item">
                 <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
             </li>
-<<<<<<< HEAD
->>>>>>> c5ee8d205e53eaae83e04d3f3a1ddfe26d99abfc
 
         </ul>
 
-<<<<<<< HEAD
-                    @guest
-                        <li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Register</a></li>
-                    @else
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarconfig" data-toggle="dropdown"
-                               aria-haspopup="true" aria-expanded="false">
-                                @if(Auth::user()->imagen_thumb)
-                                <img src="{{ Auth::user()->imagen_thumb }}" class="img-user img-responsive rounded-circle" alt="" width="40px">
-                                @else
-                                {{--<img src="img/perfil-azul.png" class="img-user img-responsive rounded-circle" alt="">--}}
-                                    <i class="icon-user fas fa-user rounded-circle"></i>
-                                @endif
-=======
-=======
-        </ul>
 
->>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
         <!-- Right navbar links -->
         <ul class="navbar-nav">
 
@@ -144,11 +73,6 @@
 document.getElementById('logout-form').submit();">
                                 Cerrar sesión
                             </a>
-<<<<<<< HEAD
->>>>>>> c5ee8d205e53eaae83e04d3f3a1ddfe26d99abfc
-=======
-
->>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                   style="display: none;">
@@ -265,37 +189,6 @@ document.getElementById('logout-form').submit();">
                 </div><!-- /.row -->
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div class="col-12">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="fas fa-home"></i> </a></li>
-                            <li class="breadcrumb-item"><a href="#">Library</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Data</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-
-            @if (count($errors) > 0)
-                <div class="row">
-                    <div class="col-12">
-                        @foreach ($errors->all() as $error)
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                <strong>{{$error}}</strong>.
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            @endif
-            
-=======
-=======
->>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
                 @if(isset($errors))
                     @foreach($errors as $e)
                         <div class="row">
@@ -320,11 +213,6 @@ document.getElementById('logout-form').submit();">
             <div class="container-fluid">
 
                 @yield('content')
-<<<<<<< HEAD
->>>>>>> c5ee8d205e53eaae83e04d3f3a1ddfe26d99abfc
-=======
-
->>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
 
             </div>
             <!-- /.container-fluid -->

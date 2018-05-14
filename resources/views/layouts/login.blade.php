@@ -47,20 +47,6 @@
             </li>
 
         </ul>
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    <nav class="navbar navbar-expand navbar-blue w-100">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ env('APP_NAME', 'MDS') }}
-            </a>
-        </div>
-=======
->>>>>>> c5ee8d205e53eaae83e04d3f3a1ddfe26d99abfc
-=======
->>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
     </nav>
 
     <!-- Content Wrapper. Contains page content -->
