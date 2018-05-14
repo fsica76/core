@@ -233,22 +233,7 @@ document.getElementById('logout-form').submit();">
                 <img src="img/logocid.png" class="img" style="width: 90%;">
             </div>
         </div>
-        <div class="row d-flex px-5 py-3 my-3 justify-content-between footer-azul" style="margin-top: 0px;">
-            <div class="col-xs-12 col-md-6 mt-2">
-                <div class="row mb-4">
-                    <a href="https://es-la.facebook.com/MDSNacion/" class="text-light mt-2 mr-2 mx-auto mx-md-2"><i class="fa fa-facebook-f fa-2x"></i></a>
-                    <a href="https://twitter.com/mdsnacion?lang=es" class="text-light mt-2 mr-2 mx-auto mx-md-2"><i class="fa fa-twitter fa-2x"></i></a>
-                    <a href="https://www.youtube.com/user/DesarrolloSocialTV" class="text-light mt-2 mr-2 mx-auto mx-md-2"><i class="fa fa-youtube fa-2x"></i></a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <div class="row px-2 py-2">
-                    <i class="fa fa-phone fa-2x text-light mt-2 mr-2 mx-auto mr-md-4 text-md-right"></i>
-                    <p class="text-light font-weight-bold mx-auto ml-md-0 mr-md-4 text-md-right telefono">0800-222-3294</p>
-                </div>
-            </div>
-        </div>
-
+        
         <div class="row d-flex px-5 py-3 justify-content-between">
             <div class="row textoFooter text-uppercase mx-auto ml-md-0">
                 <div class="col-xs-12 col-md-12 ml-md-2 mx-auto pl-md-0">
