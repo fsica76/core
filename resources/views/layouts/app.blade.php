@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <<<<<<< HEAD
+<<<<<<< HEAD
     {{--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">--}}
 
 
@@ -38,11 +39,16 @@
             <strong>{{ env('APP_NAME', 'MDS2') }}</strong>
         </div>
 =======
+=======
+>>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
 
     <!-- Font Awesome Icons -->
     {{--    <link rel="stylesheet" href="{{ asset('js/plugins/font-awesome/css/font-awesome.min.css') }}">--}}
     <link rel="stylesheet" href="{{ asset('plugins/font-awesome/css/font-awesome.css') }}">
+<<<<<<< HEAD
 >>>>>>> c5ee8d205e53eaae83e04d3f3a1ddfe26d99abfc
+=======
+>>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
 
     <!-- IonIcons -->
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -50,34 +56,31 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <li>
                 <a href="{{route('core.index')}}">
                     <i class="fa fa-link"></i>
                     <span>Core</span>
                 </a>
             </li>
-
-            <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
-                    <i class="fas fa-cogs"></i>
-                    <span>Config</span>
-                </a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li><a href="{{route('configs.users.index')}}">Users</a></li>
-                    <li><a href="{{route('configs.roles.index')}}">Roles</a></li>
-                    <li><a href="{{route('configs.permissions.index')}}">Permissions</a></li>
-                </ul>
-            </li>
-
-        </ul>
-
-    </aside>
-
 =======
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+>>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
 
-    {{--<script src="{{ asset('js/plugins/bootstrap/bootstrap.js') }}"></script>--}}
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+<<<<<<< HEAD
+=======
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+=======
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet">
+>>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
+
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -89,6 +92,7 @@
             <li class="nav-item">
                 <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
             </li>
+<<<<<<< HEAD
 >>>>>>> c5ee8d205e53eaae83e04d3f3a1ddfe26d99abfc
 
         </ul>
@@ -108,6 +112,10 @@
                                     <i class="icon-user fas fa-user rounded-circle"></i>
                                 @endif
 =======
+=======
+        </ul>
+
+>>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
         <!-- Right navbar links -->
         <ul class="navbar-nav">
 
@@ -136,7 +144,11 @@
 document.getElementById('logout-form').submit();">
                                 Cerrar sesión
                             </a>
+<<<<<<< HEAD
 >>>>>>> c5ee8d205e53eaae83e04d3f3a1ddfe26d99abfc
+=======
+
+>>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                   style="display: none;">
@@ -254,6 +266,7 @@ document.getElementById('logout-form').submit();">
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -281,6 +294,8 @@ document.getElementById('logout-form').submit();">
             @endif
             
 =======
+=======
+>>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
                 @if(isset($errors))
                     @foreach($errors as $e)
                         <div class="row">
@@ -305,7 +320,11 @@ document.getElementById('logout-form').submit();">
             <div class="container-fluid">
 
                 @yield('content')
+<<<<<<< HEAD
 >>>>>>> c5ee8d205e53eaae83e04d3f3a1ddfe26d99abfc
+=======
+
+>>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
 
             </div>
             <!-- /.container-fluid -->
@@ -364,9 +383,6 @@ document.getElementById('logout-form').submit();">
 
 @yield('js')
 
-<script>
-
-</script>
 
 </body>
 </html>
