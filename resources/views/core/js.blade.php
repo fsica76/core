@@ -20,5 +20,29 @@
         $('#sidebarCollapse').on('click', function () {
             $('#sidebar').toggleClass('active');
         });
+
+
+        // guarda en localstorage el nombre del menu para luego volver a abrirlo
+        var menu = localStorage.getItem('menu');
+
+        $('.sidebar li a').each(function(){
+            if($(this).text() == menu){
+                if($(this).parent().parent().hasClass('nav-treeview')){
+                    $(this).parent().parent().toggle();
+                    $(this).parent().parent().parent().addClass('menu-open');
+
+                    $(this).addClass('active');
+                }else
+                    $(this).addClass('active');
+
+            }
+        });
+
+
+        $('.menu').on('click',function()
+        {
+            localStorage.setItem('menu',$(this).text());
+        });
+
     });
 </script>

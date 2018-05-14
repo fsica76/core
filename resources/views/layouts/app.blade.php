@@ -95,7 +95,7 @@ document.getElementById('logout-form').submit();">
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <aside class="main-sidebar sidebar-core-secondary elevation-4">
         <!-- Brand Logo -->
         <a href="/" class="brand-link">
             <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
@@ -114,7 +114,7 @@ document.getElementById('logout-form').submit();">
                     data-accordion="false">
 
                     <li class="nav-item">
-                        <a href="{{ url('/') }}" class="nav-link">
+                        <a href="{{ url('/') }}" class="nav-link menu">
                             <i class="fa fa-home"></i>
                             <p>
                                 <span>Home</span>
@@ -123,7 +123,7 @@ document.getElementById('logout-form').submit();">
                     </li>
 
                     <li class="nav-item">
-                        <a href="{{ route('core.index') }}" class="nav-link">
+                        <a href="{{ route('core.index') }}" class="nav-link  menu">
                             <i class="fa fa-link"></i>
                             <p>
                                 <span>Core</span>
@@ -142,19 +142,19 @@ document.getElementById('logout-form').submit();">
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{route('configs.users.index')}}" class="nav-link">
+                                <a href="{{route('configs.users.index')}}" class="nav-link menu">
                                     {{--<i class="fa fa-circle-o nav-icon"></i>--}}
                                     <p>Users</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('configs.roles.index')}}" class="nav-link">
+                                <a href="{{route('configs.roles.index')}}" class="nav-link menu">
                                     {{--<i class="fa fa-circle-o nav-icon"></i>--}}
                                     <p>Roles</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('configs.permissions.index')}}" class="nav-link">
+                                <a href="{{route('configs.permissions.index')}}" class="nav-link menu">
                                     {{--<i class="fa fa-circle-o nav-icon"></i>--}}
                                     <p>Permissions</p>
                                 </a>
