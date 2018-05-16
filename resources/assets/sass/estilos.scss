@@ -28,10 +28,17 @@
   color: #3c8dbc !important;
 }
 
-
 // Footer CID
+
+footer{
+  z-index: 1120;
+  position: relative;
+  bottom: 0;
+}
+
 .footer-azul
 {
+  height: 76px;
   background-color: #183647;
 }
 

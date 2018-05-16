@@ -28,7 +28,8 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css"
+          rel="stylesheet">
 
 </head>
 
@@ -88,15 +89,15 @@ document.getElementById('logout-form').submit();">
 
                     </div>
                 </li>
-            @endguest
+                @endguest
 
         </ul>
     </nav>
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-core-secondary elevation-4">
-        <!-- Brand Logo -->
+    <!-- Brand Logo -->
+    <aside class="main-sidebar sidebar-core-danger elevation-4">
         <a href="/" class="brand-link">
             <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
@@ -194,7 +195,8 @@ document.getElementById('logout-form').submit();">
                         <div class="row">
                             <div class="col-12">
                                 <div class="alert alert-danger alert-dismissible">
-                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×
+                                    </button>
                                     <i class="icon fa fa-ban"></i><strong>Ey!</strong>
                                     Lo que sea
                                 </div>
@@ -222,26 +224,13 @@ document.getElementById('logout-form').submit();">
     <!-- /.content-wrapper -->
 
     <!-- Main Footer -->
-    <footer class="mt-2 main-footer">
-        <div class="row d-flex pt-3 pr-md-4 pl-4 mb-0" style="border-top: 2px solid #000; margin-bottom: 0px;">
-            <div class="col-md-3 mx-xs-auto mx-xs-auto mx-md-0 ml-md-auto">
-                <img src="img/logocid.png" class="img" style="width: 90%;">
+    <footer class="container-fluid mt-2 d-none d-md-block bg-dark">
+        <div class="row d-flex pt-0 pr-md-4 pl-4 mb-0 py-2">
+            <div class="col-xs-12 col-md-3">
+                <img src="{{asset('img/logocid-blanco.png')}}" class="img" style="width: 90%;">
             </div>
-        </div>
-        
-        <div class="row d-flex px-5 py-3 justify-content-between">
-            <div class="row textoFooter text-uppercase mx-auto ml-md-0">
-                <div class="col-xs-12 col-md-12 ml-md-2 mx-auto pl-md-0">
-                    <p class="font-weight-bold text-center text-md-left">Ministerio de Desarrollo Social</p>
-                    <p class="font-weight-light text-center text-md-left">Av. 9 de Julio 1925 | C1073ABA</p>
-                    <p class="font-weight-light text-center text-md-left">CABA | República Argentina</p>
-                    <p class="font-weight-light text-center text-md-left">© 2003 - 2018 Todos los derechos reservados</p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <div class="row px-2">
-                    <img class="mx-auto mr-md-1 text-md-right align-top" src="img/logo-mds.png">
-                </div>
+            <div class="col-xs-12 col-md-3 pt-1 ml-md-auto">
+                <img class="mx-auto" src="{{asset('img/logomin-bco.png')}}" style="width: 70%;">
             </div>
         </div>
     </footer>
