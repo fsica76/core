@@ -1,86 +1,44 @@
 @extends('layouts.app')
 
-@section('title')
-    Form Core
-@endsection
-
 @section('content')
-    <div class="row">
-        <div class="col-12">
-            @if(isset($model))
-                {!! Form::model($model,['route'=>[config($confFile.'.routeUpdate'),$model->id]]) !!}
-            @else
-                {!! Form::open(['route'=> config($confFile.'.routeStore')]) !!}
-            @endif
+    <div class="card-header">
+        <h3 class="card-title">CORE</h3>
+    </div>
+    <div class="card-body">
+        @if(isset($model))
+            {!! Form::model($model,['route'=>[config($confFile.'.routeUpdate'),$model->id]]) !!}
+        @else
+            {!! Form::open(['route'=> config($confFile.'.routeStore')]) !!}
+        @endif
 
             <div class="form-group">
                 {!! Form::label('String') !!}
                 {!! Form::text('string',null,['class'=>'form-control']) !!}
-                <span class="text-danger">{{ $errors->has('string') ? $errors->first('string') : '' }}</span>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div class="form-group">
-            {!! Form::label('Tiny') !!}
-            {!! Form::text('tiny',null,['class'=>'form-control']) !!}
-            <span class="text-danger">{{ $errors->has('tiny') ? $errors->first('tiny') : '' }}</span>
-        </div>
-        <div class="form-group">
-            {!! Form::label('Text') !!}
-            {!! Form::text('text',null,['class'=>'form-control']) !!}
-            <span class="text-danger">{{ $errors->has('text') ? $errors->first('text') : '' }}</span>
-        </div>
-        <div class="form-group">
-            {!! Form::label('Date') !!}
-            {!! Form::text('date',null,['class'=>'datepicker form-control']) !!}
-            <span class="text-danger">{{ $errors->has('date') ? $errors->first('date') : '' }}</span>
-=======
-=======
->>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
             </div>
-            <div class="form-group">
-                {!! Form::label('Double') !!}
-                {!! Form::text('double',null,['class'=>'form-control']) !!}
-                <span class="text-danger">{{ $errors->has('double') ? $errors->first('double') : '' }}</span>
-            </div>
-
             <div class="form-group">
                 {!! Form::label('Tiny') !!}
                 {!! Form::text('tiny',null,['class'=>'form-control']) !!}
-                <span class="text-danger">{{ $errors->has('tiny') ? $errors->first('tiny') : '' }}</span>
             </div>
             <div class="form-group">
                 {!! Form::label('Text') !!}
                 {!! Form::text('text',null,['class'=>'form-control']) !!}
-                <span class="text-danger">{{ $errors->has('text') ? $errors->first('text') : '' }}</span>
             </div>
             <div class="form-group">
                 {!! Form::label('Date') !!}
-                {!! Form::text('date',null,['class'=>'form-control']) !!}
-                <span class="text-danger">{{ $errors->has('date') ? $errors->first('date') : '' }}</span>
+                {!! Form::text('date',null,['class'=>'datepicker form-control']) !!}
             </div>
-            <button type="submit" class="btn btn-secondary">Agregar</button>
-            {!! Form::close() !!}
-<<<<<<< HEAD
->>>>>>> c5ee8d205e53eaae83e04d3f3a1ddfe26d99abfc
-=======
-=======
-        <div class="form-group">
-            {!! Form::label('Tiny') !!}
-            {!! Form::text('tiny',null,['class'=>'form-control']) !!}
-            <span class="text-danger">{{ $errors->has('tiny') ? $errors->first('tiny') : '' }}</span>
-        </div>
-        <div class="form-group">
-            {!! Form::label('Text') !!}
-            {!! Form::text('text',null,['class'=>'form-control']) !!}
-            <span class="text-danger">{{ $errors->has('text') ? $errors->first('text') : '' }}</span>
-        </div>
-        <div class="form-group">
-            {!! Form::label('Date') !!}
-            {!! Form::text('date',null,['class'=>'datepicker form-control']) !!}
-            <span class="text-danger">{{ $errors->has('date') ? $errors->first('date') : '' }}</span>
->>>>>>> 1b13b9a43540831bee1ae46c6b40c998cd3fad97
->>>>>>> 84af5eaffb388fee4e1fe3e043a24c53b83ed6a8
-        </div>
+            <div class="form-group">
+                {!! Form::label('Double') !!}
+                {!! Form::text('double',null,['class'=>'form-control']) !!}
+            </div>
+            <div class="form-group">
+                {!! Form::label('Select') !!}
+                {!! Form::select('double',[1,2,3,4,6],null, ['class'=>'form-control select2']) !!}
+            </div>
     </div>
+    <div class="card-footer">
+        <button type="submit" class="btn btn-secondary">Agregar</button>
+        {!! Form::close() !!}
+     </div>
+
 @endsection

@@ -1,13 +1,11 @@
 @extends('layouts.app')
-@section('title')
-    Core
-@endsection
-
 
 @section('content')
-    <div class="col-12">
-        <table class="table table-hover">
-
+    <div class="card-header">
+        <h3 class="card-title">CORE</h3>
+    </div>
+    <div class="card-body">
+        <table id="table" class="table table-hover">
 
             <thead>
             <tr>
@@ -33,7 +31,8 @@
             </tbody>
         </table>
 
-
+    </div>
+    <div class="card-footer">
         <a href="{{ route(config($confFile.'.routeCreate')) }}" class="btn btn-secondary">Crear</a>
     </div>
 @endsection

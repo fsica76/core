@@ -30,6 +30,7 @@
     <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css"
           rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 
 </head>
 
@@ -57,10 +58,9 @@
                     <a class="nav-link" href="#" id="navbarconfig" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
                         @if(Auth::user()->imagen_thumb)
-                            <img src="{{ Auth::user()->imagen_thumb }}" class="img-user img-responsive rounded-circle"
-                                 alt="">
+                            <img src="{{ Auth::user()->imagen_thumb }}" class="img-user img-responsive rounded-circle" alt=""  >
                         @else
-                            <img src="img/perfil-azul.png" class="img-user img-responsive rounded-circle" alt="">
+                            <img src="img/perfil-azul.png" class="img-user img-responsive rounded-circle" alt="" >
                             {{--<i class="icon-user fa fa-user rounded-circle"></i>--}}
                         @endif
 
@@ -97,15 +97,11 @@ document.getElementById('logout-form').submit();">
 
     <!-- Main Sidebar Container -->
     <!-- Brand Logo -->
-    <aside class="main-sidebar sidebar-core-danger elevation-4">
-        <a href="/" class="brand-link">
-            <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-                 style="opacity: .8">
-            <span class="brand-text font-weight-light">{{ config('app.name', 'Laravel') }}</span>
+    <aside class="main-sidebar sidebar-core-secondary elevation-1">
 
+        <a href="#" class="brand-link">
+            <img src="img/logocid.png" width="240px"  >
         </a>
-
-
         <!-- Sidebar -->
         <div class="sidebar">
 
@@ -190,20 +186,19 @@ document.getElementById('logout-form').submit();">
                 </div><!-- /.row -->
 
 
-                @if(isset($errors))
-                    @foreach($errors as $e)
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="alert alert-danger alert-dismissible">
-                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×
+                @if (count($errors) > 0)
+                    <div class="row">
+                        <div class="col-12">
+                            @foreach ($errors->all() as $error)
+                                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                    <strong>{{$error}}</strong>.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
                                     </button>
-                                    <i class="icon fa fa-ban"></i><strong>Ey!</strong>
-                                    Lo que sea
                                 </div>
-
-                            </div>
+                            @endforeach
                         </div>
-                    @endforeach
+                    </div>
                 @endif
 
             </div><!-- /.container-fluid -->
@@ -212,11 +207,11 @@ document.getElementById('logout-form').submit();">
 
         <!-- Main content -->
         <div class="content">
-            <div class="container-fluid">
 
-                @yield('content')
+                <div class="card">
+                    @yield('content')
+                </div>
 
-            </div>
             <!-- /.container-fluid -->
         </div>
         <!-- /.content -->
@@ -224,13 +219,14 @@ document.getElementById('logout-form').submit();">
     <!-- /.content-wrapper -->
 
     <!-- Main Footer -->
-    <footer class="container-fluid mt-2 d-none d-md-block bg-dark">
-        <div class="row d-flex pt-0 pr-md-4 pl-4 mb-0 py-2">
-            <div class="col-xs-12 col-md-3">
-                <img src="{{asset('img/logocid-blanco.png')}}" class="img" style="width: 90%;">
+
+    <footer class="main-footer ">
+        <div class="row ">
+            <div class="col-6 ">
+                <img src="{{asset('img/logocid.png')}}" class="img" style="width: 200px" >
             </div>
-            <div class="col-xs-12 col-md-3 pt-1 ml-md-auto">
-                <img class="mx-auto" src="{{asset('img/logomin-bco.png')}}" style="width: 70%;">
+            <div class="col-6">
+                <img class="mx-auto" src="{{asset('img/logo-mds.png')}}" >
             </div>
         </div>
     </footer>

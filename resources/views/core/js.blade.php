@@ -6,16 +6,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.es.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {
+
+
+        $('.select2').select2();
 
         $('.datepicker').datepicker({
             format: 'dd-mm-yyyy'
 
         });
 
-        $('#table').DataTable();
+        $('#table').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
+            }
+        });
 
         $('#sidebarCollapse').on('click', function () {
             $('#sidebar').toggleClass('active');

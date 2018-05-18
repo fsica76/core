@@ -41,11 +41,8 @@ class AuthController extends Controller
     {
 
         if (! $request->has('user') || ! $request->has('token')) abort(403);
-
-        // Valido el token
-
-        $ssoFunction->validate($request->get('user'), $request->get('token'));
-
+            // Valido el token
+            $ssoFunction->validate($request->get('user'), $request->get('token'));
 
         if ($ssoFunction->getHttpCode() != 200) abort(403);
             $datosSso = $ssoFunction->getResultado();

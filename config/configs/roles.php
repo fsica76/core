@@ -7,6 +7,7 @@ $module = 'roles';
 return [
 
     'paginate' => '50',
+    'updateable' => false,
 
 
 //directorio de las vistas

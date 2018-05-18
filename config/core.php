@@ -5,6 +5,8 @@ $module = 'core';
 return [
 
 'paginate' => '50',
+'updateable' => true,
+
 
 //directorio de las vistas
 

@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Controller extends BaseController
 {
@@ -47,6 +48,18 @@ class Controller extends BaseController
         $model = $this->repo->find($this->route->id);
 
         $model->fill($request->all());
+
+            //updateables
+            if(config($this->confFile.'.updateable'))
+            {
+                $diffs = array_diff($model->getAttributes(),$model->getOriginal());
+                foreach ($diffs as $diff => $a)
+                {
+                    $col = $diff;
+                    $model->Updateables()->create(['users_id' => Auth::user()->id, 'column' => $col, 'new_data' => $model->$diff, 'old_data' => $model->getOriginal($diff)]);
+                }
+            }
+
         $model->save();
 
         return redirect()->route(config($this->confFile.".viewIndex"))->withErrors('Registro Editado.');
