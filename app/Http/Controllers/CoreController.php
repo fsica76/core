@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Repositories\CoreRepo as Repo;
 use Illuminate\Routing\Route;
 
+
 class CoreController extends Controller
 {
     protected $repo;
@@ -22,6 +23,7 @@ class CoreController extends Controller
 
         $this->confFile = $confFile;
         $this->data['confFile'] = $confFile;
+
     }
 
 }
