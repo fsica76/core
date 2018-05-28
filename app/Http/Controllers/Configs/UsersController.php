@@ -44,7 +44,8 @@ class UsersController extends Controller
 
         $model = $this->repo->find($this->route->id);
 
-        $model->fill($request->all());
+
+        $model->fill($request->except('password'));
 
         //updateables
         if(config($this->confFile.'.updateable'))

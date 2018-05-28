@@ -29,13 +29,16 @@
             <span class="text-danger">{{ $errors->has('username') ? $errors->first('username') : '' }}</span>
 
         </div>
-        <div class="form-group">
-            {!! Form::label('Password') !!}
-            {!! Form::text('password',null,['class'=>'form-control']) !!}
-            <span class="text-danger">{{ $errors->has('password') ? $errors->first('password') : '' }}</span>
 
-        </div>
-        <div class="form-group">
+        @if(!isset($model))
+            <div class="form-group">
+                {!! Form::label('Password') !!}
+                {!! Form::text('password',null,['class'=>'form-control']) !!}
+                <span class="text-danger">{{ $errors->has('password') ? $errors->first('password') : '' }}</span>
+            </div>
+        @endif
+
+            <div class="form-group">
             {!! Form::label('Email') !!}
             {!! Form::text('email',null,['class'=>'form-control']) !!}
             <span class="text-danger">{{ $errors->has('email') ? $errors->first('email') : '' }}</span>
