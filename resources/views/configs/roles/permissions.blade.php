@@ -1,16 +1,18 @@
 @extends('layouts.app')
 
     @section('content')
-        <h2> Permisos : {{$model->name}} </h2>
 
+        <div class="card-header">
+            <h3 class="card-title">Permisos : {{$model->name}}s</h3>
+        </div>
+
+        <div class="card-body">
             {!! Form::model($model,['route'=>['configs.roles.permissions',$model->id]]) !!}
             {!! Form::hidden('role_id',$model->id) !!}
-
-        <div>
-            <table class="table">
+            <table id="table" class="table">
                 <thead>
                     <th></th>
-                    <th></th>
+                    <th>Permisos</th>
                 </thead>
                 <tbody>
                 @foreach($permissions as $permission)
@@ -27,9 +29,11 @@
                 @endforeach
                 </tbody>
             </table>
-
         </div>
 
-        <button type="submit" class="btn btn-secondary">Guardar</button>
-        {!! Form::close() !!}
+        <div class="card-footer">
+            <button type="submit" class="btn btn-secondary">Agregar</button>
+            {!! Form::close() !!}
+        </div>
+
     @endsection

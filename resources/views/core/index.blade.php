@@ -6,7 +6,6 @@
     </div>
     <div class="card-body">
         <table id="table" class="table table-hover">
-
             <thead>
             <tr>
                 <th>#</th>
@@ -30,7 +29,6 @@
             @endforeach
             </tbody>
         </table>
-
     </div>
     <div class="card-footer">
         <a href="{{ route(config($confFile.'.routeCreate')) }}" class="btn btn-secondary">Crear</a>

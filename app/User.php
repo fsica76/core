@@ -11,13 +11,14 @@ class User extends Authenticatable
     use Notifiable;
     use HasRoles;
 
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'fullname','username','name', 'email', 'password','sedes_id','is_active'
     ];
 
     /**
@@ -36,5 +37,12 @@ class User extends Authenticatable
 
         if($this->attributes['is_active'] == 0)
             return 'Inactivo';
+    }
+
+    public function getRolesIdAttribute()
+    {
+
+        return $this->roles->pluck('id')->toArray();
+
     }
 }

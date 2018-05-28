@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
     @section('content')
-        <h2>Permissions</h2>
+        <div class="card-header">
+            <h3 class="card-title">Permisos</h3>
+        </div>
+        <div class="card-body">
         <table id="table" class="table">
             <thead>
                 <th>#</th>
@@ -22,5 +25,9 @@
             </tbody>
         </table>
 
-        <a href="{{route(config($confFile.'.routeCreate'))}}" class="btn btn-secondary">Agregar</a>
+        </div>
+        <div class="card-footer">
+            <a href="{{ route(config($confFile.'.routeCreate')) }}" class="btn btn-secondary">Crear</a>
+        </div>
+
     @endsection

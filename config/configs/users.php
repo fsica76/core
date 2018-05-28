@@ -29,11 +29,13 @@ return [
 
     'validationsStore' =>
         [
+            'fullname' => 'required',
+            'username' => 'required|unique:users',
             'name' => 'required',
 //            'slug' =>'required',
 //            'level'=>'required',
 //            'tiny' =>  'required|boolean',
-//            'date'=> 'required|date',
+            'roles_id'=> 'required',
             'email'=> 'required|email',
             'password'=> 'required'
 
@@ -47,6 +49,7 @@ return [
 //        'level'=>'required',
 //        'tiny' =>  'required|boolean',
 //        'date'=> 'required|date',
+        'roles_id'=> 'required',
         'email'=> 'required|email'
     ],
 

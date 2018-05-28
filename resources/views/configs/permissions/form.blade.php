@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
     @section('content')
-        <h2>Form PERMISSIONS</h2>
-        @if(isset($model))
+        <div class="card-header">
+            <h3 class="card-title">Form Permisos</h3>
+        </div>
+        <div class="card-body">        @if(isset($model))
             {!! Form::model($model,['route'=>[config($confFile.'.routeUpdate'),$model->id]]) !!}
         @else
             {!! Form::open(['route'=> config($confFile.'.routeStore') ]) !!}
@@ -33,7 +35,9 @@
 
         </div>--}}
 
-
-          <button type="submit" class="btn btn-default">Agregar</button>
-        {!! Form::close() !!}
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-secondary">Agregar</button>
+            {!! Form::close() !!}
+        </div>
     @endsection

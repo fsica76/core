@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
     @section('content')
-        <h2>Form ROLES</h2>
+        <div class="card-header">
+            <h3 class="card-title">Form Roles</h3>
+        </div>
+        <div class="card-body">
         @if(isset($model))
             {!! Form::model($model,['route'=>[config($confFile.'.routeUpdate'),$model->id]]) !!}
         @else
@@ -32,6 +35,9 @@
             <span class="text-danger">{{ $errors->has('level') ? $errors->first('level') : '' }}</span>
 
         </div>--}}
-        <button type="submit" class="btn btn-secondary">Agregar</button>
-        {!! Form::close() !!}
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-secondary">Agregar</button>
+            {!! Form::close() !!}
+        </div>
     @endsection

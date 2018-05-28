@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
     @section('content')
-        <h2>Roles</h2>
-        <table id="table" class="table">
+        <div class="card-header">
+            <h3 class="card-title">Roles</h3>
+        </div>
+        <div class="card-body">
+            <table id="table" class="table">
             <thead>
                 <th>#</th>
                 <th>Roles</th>
@@ -24,6 +27,8 @@
                @endforeach
             </tbody>
         </table>
-
-        <a href="{{route(config($confFile.'.routeCreate'))}}" class="btn btn-secondary">Agregar</a>
+        </div>
+        <div class="card-footer">
+            <a href="{{ route(config($confFile.'.routeCreate')) }}" class="btn btn-secondary">Crear</a>
+        </div>
     @endsection
